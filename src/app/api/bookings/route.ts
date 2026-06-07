@@ -4,12 +4,7 @@ import { supabase } from '@/lib/supabase'
 export async function GET() {
   const { data, error } = await supabase
     .from('bookings')
-    .select(`
-      *,
-      campaigns (*),
-      influencers (*),
-      brands (*)
-    `)
+    .select('*, campaigns(*), influencers(*), brands(*)')
     .order('created_at', { ascending: false })
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
