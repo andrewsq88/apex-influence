@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-export const metadata = { title: "Contact", description: "Get in touch with Apex Influence for a free strategy consultation." };
-
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", company: "", budget: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -26,7 +24,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white px-6 py-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent mb-12">Let&apos;s Talk</h1>
+        <h1 className="text-5xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent mb-12">Let&#39;s Talk</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-gray-300 text-lg mb-8">Ready to launch your next campaign? We would love to hear from you.</p>
