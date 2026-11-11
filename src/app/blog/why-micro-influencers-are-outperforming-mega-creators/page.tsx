@@ -9,7 +9,7 @@ export default function BlogPostPage() {
         <Link href="/blog" className="inline-block text-[#8b5cf6] hover:text-[#a78bfa] text-sm mb-8">&larr; Back to Blog</Link>
         <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#8b5cf6] bg-[#8b5cf6]/10 rounded-full px-3 py-1 mb-4">Trends</span>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Why Micro-Influencers Are Outperforming Mega-Creators</h1>
-        <p className="text-gray-400 text-sm mb-10">By Jordan Lee &middot; Nov 20, 2024 &middot; 5 min read</p>
+        <p className="text-gray-400 text-sm mb-10">By Apex Influence &middot; Nov 20, 2024 &middot; 5 min read</p>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>For years, the influencer marketing playbook was simple: find the biggest names, pay them the most money, and watch the impressions roll in. But the data from 2024 tells a very different story. Micro-influencers — creators with 10,000 to 100,000 followers — are consistently outperforming mega-creators across every metric that matters.</p>
           <h2 className="text-2xl font-semibold text-white mt-10">The Engagement Gap</h2>

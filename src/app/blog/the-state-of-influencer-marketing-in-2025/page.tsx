@@ -9,7 +9,7 @@ export default function BlogPostPage() {
         <Link href="/blog" className="inline-block text-[#8b5cf6] hover:text-[#a78bfa] text-sm mb-8">&larr; Back to Blog</Link>
         <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#8b5cf6] bg-[#8b5cf6]/10 rounded-full px-3 py-1 mb-4">Strategy</span>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">The State of Influencer Marketing in 2025</h1>
-        <p className="text-gray-400 text-sm mb-10">By Alex Morgan &middot; Jan 15, 2025 &middot; 8 min read</p>
+        <p className="text-gray-400 text-sm mb-10">By Apex Influence &middot; Jan 15, 2025 &middot; 8 min read</p>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>Influencer marketing has undergone a seismic shift over the past few years. What was once a niche tactic reserved for lifestyle brands has evolved into a sophisticated, data-driven discipline that sits at the core of modern digital strategy.</p>
           <h2 className="text-2xl font-semibold text-white mt-10">The Rise of Micro-Influencers</h2>

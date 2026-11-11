@@ -39,11 +39,6 @@ export function Footer() {
               <span className="text-xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent">Apex Influence</span>
             </Link>
             <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">Amplifying brands through strategic influencer partnerships and data-driven campaigns.</p>
-            <div className="mt-6 flex items-center gap-3">
-              {["Twitter", "Instagram", "LinkedIn"].map((s) => (
-                <a key={s} href={`https://${s.toLowerCase()}.com`} target="_blank" rel="noopener noreferrer" aria-label={s} className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-gray-400 hover:text-white hover:bg-gradient-to-br hover:from-[#8b5cf6] hover:to-[#3b82f6] transition-all duration-300"><span className="text-xs">{s[0]}</span></a>
-              ))}
-            </div>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Services</h3>

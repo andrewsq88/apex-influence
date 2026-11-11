@@ -1,17 +1,10 @@
-export const metadata = { alternates: { canonical: '/about' }, title: "About", description: "Learn about Apex Influence, our mission, team, and values." };
+export const metadata = { alternates: { canonical: '/about' }, title: "About", description: "Learn about Apex Influence, our mission and values." };
 
 const values = [
   { title: "Authenticity", description: "We believe real connections drive real results. Every partnership is built on genuine alignment." },
   { title: "Data-Driven", description: "Every decision is backed by data. We measure what matters and optimize continuously." },
   { title: "Innovation", description: "We stay ahead of trends and leverage cutting-edge tools to give our clients an edge." },
   { title: "Partnership", description: "We are not vendors — we are partners. Your success is our success." },
-];
-
-const team = [
-  { name: "Alex Morgan", role: "CEO & Founder", bio: "10+ years in digital marketing. Former head of social at a Fortune 500.", initials: "AM" },
-  { name: "Jordan Lee", role: "Head of Strategy", bio: "Former brand director at Fortune 500. Expert in campaign architecture.", initials: "JL" },
-  { name: "Sam Rivera", role: "Creative Director", bio: "Award-winning content strategist with 8+ years in creator economy.", initials: "SR" },
-  { name: "Taylor Kim", role: "Head of Analytics", bio: "Data science PhD, ex-Google. Builds our proprietary analytics tools.", initials: "TK" },
 ];
 
 export default function AboutPage() {
@@ -30,11 +23,8 @@ export default function AboutPage() {
           </div>
           <div className="bg-[#111118] rounded-2xl p-12 border border-[#8b5cf6]/10 flex items-center justify-center"><div className="text-center"><div className="text-6xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent mb-2">2020</div><p className="text-gray-500">Founded in Los Angeles</p></div></div>
         </div>
-        <div className="mb-24"><h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
+        <div><h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">{values.map((v) => (<div key={v.title} className="bg-[#111118] rounded-xl p-6 border border-transparent hover:border-[#8b5cf6]/30 transition-all"><h3 className="text-lg font-semibold text-white mb-2">{v.title}</h3><p className="text-gray-400 text-sm leading-relaxed">{v.description}</p></div>))}</div>
-        </div>
-        <div><h2 className="text-3xl font-bold text-white mb-8 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">{team.map((m) => (<div key={m.name} className="bg-[#111118] rounded-xl p-6 text-center border border-transparent hover:border-[#8b5cf6]/30 transition-all"><div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#3b82f6] flex items-center justify-center mx-auto mb-4"><span className="text-white font-bold text-lg">{m.initials}</span></div><h3 className="text-lg font-semibold text-white">{m.name}</h3><p className="text-[#8b5cf6] text-sm mb-2">{m.role}</p><p className="text-gray-400 text-sm">{m.bio}</p></div>))}</div>
         </div>
       </section>
     </main>

@@ -4,8 +4,6 @@ export const SITE_CONFIG = {
   url: "https://apex-influence.vercel.app",
   description:
     "A full-service influencer marketing agency connecting brands with authentic creators through data-driven campaigns.",
-  email: "hello@apexinfluence.com",
-  phone: "+1 (555) 123-4567",
   location: "Los Angeles, CA",
 } as const;
 
