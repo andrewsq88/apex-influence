@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/consent/CookieBanner";
 
 const servicesLinks = [
   { label: "Influencer Marketing", href: "/services" },
@@ -63,6 +64,12 @@ export function Footer() {
         </div>
         <div className="py-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Apex Influence. All rights reserved.</p>
+          <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">Cookies</Link>
+            <CookieSettingsButton className="hover:text-white transition-colors" />
+          </nav>
         </div>
       </div>
     </footer>

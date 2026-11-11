@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Why Micro-Influencers Are Outperforming Mega-Creators', description: 'The data is clear: smaller audiences drive higher engagement and better conversion rates.' };
+export const metadata = { alternates: { canonical: '/blog/why-micro-influencers-are-outperforming-mega-creators' }, title: 'Why Micro-Influencers Are Outperforming Mega-Creators', description: 'The data is clear: smaller audiences drive higher engagement and better conversion rates.' };
 
 export default function BlogPostPage() {
   return (

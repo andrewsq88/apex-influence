@@ -1,4 +1,4 @@
-export const metadata = { title: "About", description: "Learn about Apex Influence, our mission, team, and values." };
+export const metadata = { alternates: { canonical: '/about' }, title: "About", description: "Learn about Apex Influence, our mission, team, and values." };
 
 const values = [
   { title: "Authenticity", description: "We believe real connections drive real results. Every partnership is built on genuine alignment." },

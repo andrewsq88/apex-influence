@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Blog & Insights', description: 'Expert insights on influencer marketing, brand strategy, and social media trends.' };
+export const metadata = { alternates: { canonical: '/blog' }, title: 'Blog & Insights', description: 'Expert insights on influencer marketing, brand strategy, and social media trends.' };
 
 const posts = [
   { slug: 'the-state-of-influencer-marketing-in-2025', category: 'Strategy', title: 'The State of Influencer Marketing in 2025', excerpt: 'From micro-influencers to AI-driven campaigns, here is what is shaping the industry this year.', date: 'Jan 15, 2025', readTime: '8 min read' },

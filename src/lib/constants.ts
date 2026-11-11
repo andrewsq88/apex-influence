@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: "Apex Influence",
   tagline: "Where Influence Meets Impact",
-  url: "https://apexinfluence.com",
+  url: "https://apex-influence.vercel.app",
   description:
     "A full-service influencer marketing agency connecting brands with authentic creators through data-driven campaigns.",
   email: "hello@apexinfluence.com",

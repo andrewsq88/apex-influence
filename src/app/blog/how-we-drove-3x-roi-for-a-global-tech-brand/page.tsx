@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'How We Drove 3x ROI for a Global Tech Brand', description: 'A deep dive into our Q4 campaign strategy and the data behind the results.' };
+export const metadata = { alternates: { canonical: '/blog/how-we-drove-3x-roi-for-a-global-tech-brand' }, title: 'How We Drove 3x ROI for a Global Tech Brand', description: 'A deep dive into our Q4 campaign strategy and the data behind the results.' };
 
 export default function BlogPostPage() {
   return (

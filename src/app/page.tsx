@@ -3,6 +3,8 @@ import { Services } from '@/components/sections/Services';
 import { SocialProof } from '@/components/sections/SocialProof';
 import { CTA } from '@/components/sections/CTA';
 
+export const metadata = { alternates: { canonical: '/' } };
+
 export default function HomePage() {
   return (
     <>
