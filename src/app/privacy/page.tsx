@@ -17,9 +17,9 @@ export default function PrivacyPage() {
       </LegalSection>
       <LegalSection heading="Information you send us">
         <p>
-          If you use the contact form, we receive the name, email address, company, budget and message you
-          enter. We use them to reply to your enquiry. The form is processed on our hosting provider&apos;s
-          servers, and submissions are kept in its server logs.
+          The contact form does not send anything to this website. It opens your own email app with your name,
+          email address, company, budget and message filled in, and we receive them only if you send that email.
+          We use them to reply to your enquiry.
         </p>
         <p>
           The newsletter field in the footer does not currently send or store your email address.
@@ -44,8 +44,9 @@ export default function PrivacyPage() {
       </LegalSection>
       <LegalSection heading="Analytics">
         <p>
-          We use Vercel Web Analytics to count page views and see which pages are read. It does not use cookies
-          and does not identify individual visitors. We see aggregated figures only.
+          If you accept in the cookie notice, we use Vercel Web Analytics to count page views and see which pages
+          are read. It does not use cookies and does not identify individual visitors, and query strings are
+          removed from page addresses before they are sent. We see aggregated figures only.
         </p>
       </LegalSection>
       <LegalSection heading="Hosting">

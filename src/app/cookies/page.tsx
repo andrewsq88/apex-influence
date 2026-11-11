@@ -26,8 +26,8 @@ export default function CookiesPage() {
             Google and its partners may set cookies or similar identifiers to show, limit and measure ads.
           </li>
           <li>
-            <strong>Analytics (no cookies).</strong> Vercel Web Analytics counts page views without cookies and
-            without identifying you.
+            <strong>Analytics (only if you accept, no cookies).</strong> Vercel Web Analytics counts page views
+            without cookies and without identifying you.
           </li>
         </ul>
       </LegalSection>
@@ -35,7 +35,7 @@ export default function CookiesPage() {
         <p>
           Use Cookie settings in the footer of any page to accept or decline again. You can also clear this
           site&apos;s data in your browser, or block cookies in your browser settings. If you withdraw consent,
-          reload the page so the advertising script is no longer used.
+          reload the page so the advertising and analytics scripts are no longer used.
         </p>
       </LegalSection>
       <LegalSection heading="Contact">

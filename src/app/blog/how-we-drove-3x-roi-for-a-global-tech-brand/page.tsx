@@ -9,7 +9,7 @@ export default function BlogPostPage() {
         <Link href="/blog" className="inline-block text-[#8b5cf6] hover:text-[#a78bfa] text-sm mb-8">&larr; Back to Blog</Link>
         <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#8b5cf6] bg-[#8b5cf6]/10 rounded-full px-3 py-1 mb-4">Case Study</span>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">How We Drove 3x ROI for a Global Tech Brand</h1>
-        <p className="text-gray-400 text-sm mb-10">By Alex Morgan &middot; Dec 8, 2024 &middot; 6 min read</p>
+        <p className="text-gray-400 text-sm mb-10">By Apex Influence &middot; Dec 8, 2024 &middot; 6 min read</p>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>When TechBrand approached us to launch their Q4 product line, they had ambitious goals: generate measurable sales, build brand awareness among Gen Z and Millennial audiences, and do it all within a 6-week timeline. The result? A 3x return on investment, $2M in direct sales, and 50 million impressions across platforms.</p>
           <h2 className="text-2xl font-semibold text-white mt-10">The Challenge</h2>

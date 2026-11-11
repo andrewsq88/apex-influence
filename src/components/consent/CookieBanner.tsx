@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { CONSENT_STORAGE_KEY } from '@/lib/site';
+import { saveConsent } from '@/lib/consent';
 
 type Choice = 'accepted' | 'declined' | null;
 
@@ -24,8 +25,8 @@ function readChoice(): Choice {
 }
 
 /**
- * Cookie notice. Google AdSense loads only after Accept (see ADSENSE_BOOTSTRAP
- * in the root layout). Decline keeps it off. The choice stays in this browser.
+ * Cookie notice. Google AdSense (see ADSENSE_BOOTSTRAP in the root layout) and Vercel
+ * Web Analytics (ConsentedAnalytics) load only after Accept. Decline keeps both off. The choice stays in this browser.
  */
 export function CookieBanner() {
   const [open, setOpen] = useState(false);
@@ -38,16 +39,13 @@ export function CookieBanner() {
   }, []);
 
   function choose(choice: Exclude<Choice, null>) {
-    try {
-      window.localStorage.setItem(CONSENT_STORAGE_KEY, choice);
-    } catch {
-      // Storage blocked: the choice applies to this page view only.
-    }
+    const previous = readChoice();
+    saveConsent(choice);
     setOpen(false);
     if (choice === 'accepted') {
       window.__apexLoadAds?.();
-    } else if (document.querySelector('script[src*="pagead2.googlesyndication.com"]')) {
-      // Ads were already loaded in this tab. Reload so Decline takes effect now.
+    } else if (previous === 'accepted' || document.querySelector('script[src*="pagead2.googlesyndication.com"]')) {
+      // Ads or analytics were already running in this tab. Reload so Decline takes effect now.
       window.location.reload();
     }
   }
@@ -64,8 +62,8 @@ export function CookieBanner() {
     >
       <div className="mx-auto max-w-6xl px-4 py-4 sm:flex sm:items-center sm:gap-6">
         <p className="text-sm text-gray-300">
-          We use cookies for third-party advertising (Google AdSense). Ads load only if you accept. We also count
-          page views with Vercel Web Analytics, which does not use cookies. See our{' '}
+          We use cookies for third-party advertising (Google AdSense), and we count page views with Vercel Web
+          Analytics, which does not use cookies. Both load only if you accept. See our{' '}
           <Link href="/cookies" className="text-[#a78bfa] underline">
             cookie policy
           </Link>

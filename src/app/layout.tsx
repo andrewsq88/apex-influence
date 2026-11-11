@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieBanner } from '@/components/consent/CookieBanner';
+import { ConsentedAnalytics } from '@/components/consent/ConsentedAnalytics';
 import { ADSENSE_BOOTSTRAP, ADSENSE_CLIENT, SITE_URL } from '@/lib/site';
 import './globals.css';
 
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieBanner />
-        <Analytics />
+        <ConsentedAnalytics />
       </body>
     </html>
   );
