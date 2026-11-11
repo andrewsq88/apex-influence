@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { CookieBanner } from '@/components/consent/CookieBanner';
+import { ADSENSE_BOOTSTRAP, ADSENSE_CLIENT, SITE_URL } from '@/lib/site';
 import './globals.css';
 
 const inter = Inter({
@@ -12,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Apex Influence',
     template: 'Apex Influence | %s',
@@ -30,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://apexinfluence.com',
+    url: SITE_URL,
     siteName: 'Apex Influence',
     title: 'Apex Influence — Influencer Marketing Agency',
     description: 'Connect with authentic creators and grow your brand.',
@@ -47,26 +50,16 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://apexinfluence.com' },
+  other: { 'google-adsense-account': ADSENSE_CLIENT },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Apex Influence',
-  url: 'https://apexinfluence.com',
-  logo: 'https://apexinfluence.com/logo.png',
+  url: SITE_URL,
+  logo: `${SITE_URL}/icon.svg`,
   description: 'A full-service influencer marketing agency.',
-  sameAs: [
-    'https://twitter.com/apexinfluence',
-    'https://instagram.com/apexinfluence',
-    'https://linkedin.com/company/apexinfluence',
-  ],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'sales',
-    email: 'hello@apexinfluence.com',
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -74,17 +67,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.variable}>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2857342591276131"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        <script dangerouslySetInnerHTML={{ __html: ADSENSE_BOOTSTRAP }} />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

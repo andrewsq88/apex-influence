@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = { title: "Our Work", description: "Explore our portfolio of influencer marketing campaigns and brand partnerships." };
+export const metadata = { alternates: { canonical: '/work' }, title: "Our Work", description: "Explore our portfolio of influencer marketing campaigns and brand partnerships." };
 
 const caseStudies = [
   { category: "Influencer", title: "TechBrand Q4 Launch", metric: "3x ROI in 6 weeks", description: "We partnered with 50 tech influencers to launch TechBrand new product line, generating 50M impressions and driving $2M in direct sales.", results: ["$2M Revenue", "50M Impressions", "50 Creators"] },

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = {
+export const metadata = { alternates: { canonical: '/services' },
   title: "Services",
   description: "Our influencer marketing services including influencer partnerships, brand campaigns, content strategy, and analytics.",
 };

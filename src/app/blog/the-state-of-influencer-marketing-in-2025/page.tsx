@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'The State of Influencer Marketing in 2025', description: 'From micro-influencers to AI-driven campaigns, here is what is shaping the industry this year.' };
+export const metadata = { alternates: { canonical: '/blog/the-state-of-influencer-marketing-in-2025' }, title: 'The State of Influencer Marketing in 2025', description: 'From micro-influencers to AI-driven campaigns, here is what is shaping the industry this year.' };
 
 export default function BlogPostPage() {
   return (
